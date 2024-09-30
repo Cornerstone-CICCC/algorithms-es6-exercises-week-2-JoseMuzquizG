@@ -7,12 +7,23 @@ Create a function named conditionalSum that will be given an array of numbers an
 */
 
 const conditionalSum = function (values, condition) {
-  // Your code here
+  let sum = values.reduce((total, current) => {
+    if ((condition === "even") && (current % 2 === 0)) {
+      return total + current
+    }
+    else if ((condition === "odd") && (current % 2 === 1)) {
+      return total + current
+    }
+    return total
+     
+  }, 0)
+  return sum
 };
 
-console.log(conditionalSum([1, 2, 3, 4, 5], "even")); // 6
+
+console.log(conditionalSum([1, 2, 3, 4, 5,], "even")); // 6
 console.log(conditionalSum([1, 2, 3, 4, 5], "odd")); // 9
 console.log(conditionalSum([13, 88, 12, 44, 99], "even")); // 144
 console.log(conditionalSum([], "odd")); // 0
 
-module.exports = conditionalSum;
+// module.exports = conditionalSum;
