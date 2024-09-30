@@ -9,7 +9,7 @@ Create a function named numberOfVowels that will receive a string and return the
 
 const numberOfVowels = function (data) {
   let vowels = 0
-  for (i = 0; i < data.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     if ((data[i] === "a") || (data[i] === "e") || (data[i] === "i") || (data[i] === "o") || (data[i] === "u")) {
       vowels++
     }
