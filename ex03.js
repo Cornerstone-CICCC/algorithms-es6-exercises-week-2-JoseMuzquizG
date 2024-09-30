@@ -9,7 +9,6 @@ Create a function named numberOfVowels that will receive a string and return the
 
 const numberOfVowels = function (data) {
   let vowels = 0
-  let letters = data.split("")
   for (i = 0; i < data.length; i++) {
     if ((data[i] === "a") || (data[i] === "e") || (data[i] === "i") || (data[i] === "o") || (data[i] === "u")) {
       vowels++
@@ -18,7 +17,7 @@ const numberOfVowels = function (data) {
   return vowels
 };
 
-console.log(numberOfVowels("orange")); // 3
+console.log(numberOfVowels("orangees")); // 3
 console.log(numberOfVowels("cornerstone college")); // 7
 console.log(numberOfVowels("aeiou")); // 5
 
